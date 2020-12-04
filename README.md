@@ -1,4 +1,13 @@
-# Getting Started with Create React App
+# Projet Burger-builder
+
+This project was made during a Udemy course on React.
+
+You can customize your burger as you wish. 
+
+## Preview
+![Burger builder](/preview/burger-builder.png)
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
