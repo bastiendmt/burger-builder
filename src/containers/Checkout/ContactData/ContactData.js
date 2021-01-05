@@ -2,7 +2,7 @@ import { Component } from "react"
 
 import Button from "../../../components/UI/Button/Button"
 import Spinner from '../../../components/UI/Spinner/Spinner'
-import classes from './ContactData.moule.css'
+import classes from './ContactData.module.css'
 import axios from '../../../axios-orders'
 
 class ContactData extends Component {
@@ -16,10 +16,13 @@ class ContactData extends Component {
         loading: false
     }
 
+    componentDidMount() {
+        console.log(this.props)
+    }
+
     orderHandler = (event) => {
         event.preventDefault()
 
-        alert('You continue')
         this.setState({ loading: true });
         const order = {
             ingredients: this.state.ingredients,
@@ -41,7 +44,7 @@ class ContactData extends Component {
             .then(response => {
                 console.log(response)
                 this.setState({ loading: false });
-                this.props.history('/')
+                this.props.history.push("/")
             })
             .catch(error => {
                 console.log(error);
