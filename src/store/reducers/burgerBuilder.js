@@ -9,8 +9,8 @@ const initialState = {
 
 export const INGREDIENT_PRICES = {
     salad: 0.5,
-    cheese: 1,
-    meat: 1.5,
+    cheese: 0.5,
+    meat: 2,
     bacon: 1
 };
 
