@@ -2,7 +2,7 @@ import React from 'react'
 
 import classes from './BuildControls.module.css'
 import BuildControl from './BuildControl/BuildControl'
-import { INGREDIENT_PRICE } from '../../../store/reducer'
+import { INGREDIENT_PRICES } from '../../../store/reducers/burgerBuilder'
 
 const controls = [
     { label: 'Salad', type: 'salad' },
@@ -22,13 +22,13 @@ const BuildControls = (props) => (
                 added={() => props.ingredientAdded(type)}
                 removed={() => props.ingredientRemoved(ctrl.type)}
                 disabled={props.disabled[type]}
-                unitPrice={INGREDIENT_PRICE[type]}
+                unitPrice={INGREDIENT_PRICES[type]}
             />
         })}
         <button
             className={classes.OrderButton}
             disabled={!props.purchasable}
-            onClick={props.purchase}>ORDER NOW</button>
+            onClick={props.ordered}>ORDER NOW</button>
     </div>
 )
 
