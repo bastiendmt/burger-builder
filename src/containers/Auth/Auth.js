@@ -44,7 +44,7 @@ class Auth extends Component {
     }
 
     componentDidMount() {
-        if(!this.props.buildingBurger && this.props.authRedirectPath !== '/') {
+        if (!this.props.buildingBurger && this.props.authRedirectPath !== '/') {
             this.props.onSetAuthRedirectPath()
         }
     }
@@ -152,6 +152,9 @@ class Auth extends Component {
                 {errorMessage}
                 <form onSubmit={this.submitHandler}>
                     {this.state.isSignUp ? 'SIGN UP' : 'SIGN IN'}
+                    <div>
+                        <i>Test values : test@gmail.com testtest</i>
+                    </div>
                     {form}
                     <Button btnType="Success" >SUBMIT</Button>
                     <Button
