@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { apiKey } from '../../apiKey.js'
 
 import * as actionTypes from './actionTypes';
 
@@ -48,9 +49,9 @@ export const auth = (email, password, isSignup) => {
             password: password,
             returnSecureToken: true
         };
-        let url = 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyCGRYZLQ1KC_ibOy3Qc0yNjBtmih6j9fYA'
+        let url = 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=' + apiKey
         if (!isSignup) {
-            url = 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyCGRYZLQ1KC_ibOy3Qc0yNjBtmih6j9fYA'
+            url = 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=' + apiKey
         }
         axios.post(url, authData)
             .then(response => {
