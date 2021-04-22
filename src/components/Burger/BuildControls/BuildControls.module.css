@@ -6,6 +6,15 @@
     align-items: center;
     box-shadow: 0 2px 1px #ccc;
     padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 40px;
+}
+
+@media (max-width: 500px) {
+    .BuildControls {
+        padding-bottom: 10px;
+    }
 }
 
 .OrderButton {
