@@ -20,8 +20,9 @@ const order = ( props ) => {
                 textTransform: 'capitalize',
                 display: 'inline-block',
                 margin: '0 8px',
-                border: '1px solid #ccc',
-                padding: '5px'
+                border: '1px solid rgb(222,222,222)',
+                padding: '5px',
+                borderRadius: '5px'
                 }}
             key={ig.name}>{ig.name} ({ig.amount})</span>;
     });
@@ -29,7 +30,7 @@ const order = ( props ) => {
     return (
         <div className={classes.Order}>
             <p>Ingredients: {ingredientOutput}</p>
-            <p>Price: <strong>USD {Number.parseFloat( props.price ).toFixed( 2 )}</strong></p>
+            <p>Price: <strong>${Number.parseFloat( props.price ).toFixed( 2 )}</strong></p>
         </div>
     );
 };
